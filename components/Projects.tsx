@@ -15,16 +15,15 @@
   return (
     <section id="projects" className="py-24 px-6 bg-gray-950">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-14">
+        <div className="mb-14" data-aos="fade-up">
           <div className="section-divider"></div>
           <p className="text-sm font-medium uppercase tracking-widest mb-2" style={{ color: "#00FFC6" }}>What We Have Built</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Work</h2>
           <p className="text-gray-400 text-lg max-w-2xl">Real products built and deployed — solving real problems for real people.</p>
         </div>
-
         <div className="flex flex-col gap-8">
           {projects.map((project, i) => (
-            <div key={i} className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-400/30 transition duration-300">
+            <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-400/30 transition duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-xs font-medium px-3 py-1 rounded-full border border-white/20 text-gray-300">{project.category}</span>
                 <span className="text-xs font-medium px-3 py-1 rounded-full text-gray-950 font-semibold" style={{ background: "#00FFC6" }}>{project.status}</span>
@@ -44,8 +43,7 @@
             </div>
           ))}
         </div>
-
-        <div className="mt-12 p-6 rounded-2xl border border-white/10 text-center">
+        <div data-aos="fade-up" className="mt-12 p-6 rounded-2xl border border-white/10 text-center">
           <p className="text-gray-400 text-sm">More projects coming soon as Sammey Engitech grows.</p>
         </div>
       </div>

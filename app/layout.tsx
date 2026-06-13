@@ -1,5 +1,6 @@
 ﻿import { Poppins } from "next/font/google";
 import "./globals.css";
+import AOSInit from "@/components/AOSInit";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${poppins.variable} font-sans antialiased bg-gray-950 text-white`}>
+        <AOSInit />
         {children}
       </body>
     </html>

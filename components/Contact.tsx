@@ -4,17 +4,15 @@
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] rounded-full opacity-10 blur-3xl" style={{ background: "#00FFC6" }}></div>
       </div>
-
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-14">
+        <div className="text-center mb-14" data-aos="fade-up">
           <div className="section-divider mx-auto"></div>
           <p className="text-sm font-medium uppercase tracking-widest mb-2" style={{ color: "#00FFC6" }}>Get In Touch</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Start a Project With Us</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">Have an idea? We would love to hear it. Tell us what you want to build and we will make it happen.</p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          <div className="flex flex-col gap-6">
+          <div data-aos="fade-right" className="flex flex-col gap-6">
             <div className="p-6 rounded-2xl border border-white/10 bg-white/5">
               <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">Email</p>
               <a href="mailto:sammeyengitech@gmail.com" className="hover:underline text-sm" style={{ color: "#00FFC6" }}>sammeyengitech@gmail.com</a>
@@ -31,8 +29,7 @@
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col gap-3">
+          <div data-aos="fade-left" className="flex flex-col gap-3">
             <input type="text" placeholder="Your Name" className="bg-white/5 border border-white/10 text-white placeholder-gray-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal-400 w-full transition duration-200" />
             <input type="email" placeholder="Your Email" className="bg-white/5 border border-white/10 text-white placeholder-gray-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal-400 w-full transition duration-200" />
             <input type="text" placeholder="Project Type (Web App, Mobile, AI...)" className="bg-white/5 border border-white/10 text-white placeholder-gray-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal-400 w-full transition duration-200" />
