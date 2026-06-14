@@ -6,21 +6,26 @@ export default function Hero() {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [delta, setDelta] = useState(100);
 
   const roles = ["Web Applications", "Mobile Apps", "AI Systems", "Embedded Chips", "Robotics", "The Future"];
 
   useEffect(() => {
-    const ticker = setInterval(() => {
-      const i = loopNum % roles.length;
-      const fullText = roles[i];
-      if (isDeleting) { setText(fullText.substring(0, text.length - 1)); setDelta(50); }
-      else { setText(fullText.substring(0, text.length + 1)); setDelta(100); }
-      if (!isDeleting && text === fullText) { setTimeout(() => setIsDeleting(true), 1500); }
-      else if (isDeleting && text === "") { setIsDeleting(false); setLoopNum(loopNum + 1); setDelta(100); }
-    }, delta);
-    return () => clearInterval(ticker);
-  }, [text, isDeleting, loopNum, delta]);
+    const fullText = roles[loopNum % roles.length];
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && text === fullText) {
+      timeout = setTimeout(() => setIsDeleting(true), 1500);
+    } else if (isDeleting && text === "") {
+      setIsDeleting(false);
+      setLoopNum((prev) => prev + 1);
+    } else {
+      timeout = setTimeout(() => {
+        setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
+      }, isDeleting ? 50 : 100);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, loopNum]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -77,37 +82,27 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden bg-gray-950">
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
-
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl" style={{ background: "#00FFC6" }}></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-5 blur-3xl" style={{ background: "#3B82F6" }}></div>
       </div>
-
       <div className="w-full max-w-6xl mx-auto text-center relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
           <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#00FFC6" }}></span>
           <span className="text-sm text-gray-300">Now accepting new projects</span>
         </div>
-
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
           We Build
           <br />
           <span style={{ color: "#00FFC6" }}>{text}</span>
           <span className="animate-pulse" style={{ color: "#00FFC6" }}>|</span>
         </h1>
-
-        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">
-          Building the future, one technology at a time.
-        </p>
-        <p className="text-base text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-          From web and mobile applications to AI systems, embedded chips and robotics — Sammey Engitech is where vision meets execution.
-        </p>
-
+        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">Building the future, one technology at a time.</p>
+        <p className="text-base text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">From web and mobile applications to AI systems, embedded chips and robotics — Sammey Engitech is where vision meets execution.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a href="#contact" className="px-8 py-4 rounded-lg font-medium text-base text-gray-950 hover:opacity-90 active:scale-95 transition duration-200" style={{ background: "#00FFC6" }}>Start a Project</a>
           <a href="#services" className="px-8 py-4 rounded-lg font-medium text-base text-white border border-white/20 hover:border-white/40 active:scale-95 transition duration-200">Explore Services</a>
         </div>
-
         <div className="flex items-center justify-center gap-10 text-center">
           <div>
             <p className="text-3xl font-bold text-white">2+</p>
