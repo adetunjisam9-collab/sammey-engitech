@@ -12,7 +12,6 @@ export default function Hero() {
   useEffect(() => {
     const fullText = roles[loopNum % roles.length];
     let timeout: NodeJS.Timeout;
-
     if (!isDeleting && text === fullText) {
       timeout = setTimeout(() => setIsDeleting(true), 1500);
     } else if (isDeleting && text === "") {
@@ -23,7 +22,6 @@ export default function Hero() {
         setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
       }, isDeleting ? 50 : 100);
     }
-
     return () => clearTimeout(timeout);
   }, [text, isDeleting, loopNum]);
 
@@ -33,11 +31,9 @@ export default function Hero() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     let animationId: number;
-
     const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
     resize();
     window.addEventListener("resize", resize);
-
     const particles = Array.from({ length: 60 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -47,7 +43,6 @@ export default function Hero() {
       opacity: Math.random() * 0.5 + 0.1,
       color: Math.random() > 0.6 ? "0, 255, 198" : "255, 255, 255",
     }));
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((p) => {
@@ -75,7 +70,6 @@ export default function Hero() {
       animationId = requestAnimationFrame(animate);
     };
     animate();
-
     return () => { cancelAnimationFrame(animationId); window.removeEventListener("resize", resize); };
   }, []);
 
@@ -94,7 +88,7 @@ export default function Hero() {
           <span className="animate-pulse" style={{ color: "#00FFC6" }}>|</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">Building the future, one technology at a time.</p>
-        <p className="text-base text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">From web and mobile applications to AI systems, embedded chips and robotics — Sammey Engitech is where vision meets execution.</p>
+        <p className="text-base text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">From web and mobile applications to AI systems, embedded chips and robotics — Sammey Engitech is where vision meets execution.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a href="#contact" className="px-8 py-4 rounded-lg font-medium text-base text-gray-950 hover:opacity-90 active:scale-95 transition duration-200" style={{ background: "#00FFC6" }}>Start a Project</a>
           <a href="#services" className="px-8 py-4 rounded-lg font-medium text-base text-white border border-white/20 hover:border-white/40 active:scale-95 transition duration-200">Explore Services</a>

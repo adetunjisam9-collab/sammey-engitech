@@ -10,6 +10,16 @@
       category: "Healthcare Platform",
       status: "Live",
     },
+    {
+      name: "EKO WASTE",
+      tagline: "Gamified waste management platform for Lagos residents",
+      description: "EKO WASTE connects Lagos residents, waste collectors and admins in one smart platform. Residents book pickups, collectors mark completions, and residents earn coins for every pickup — with the cleanest resident crowned on the leaderboard. Serves all 20 LGAs in Lagos.",
+      techStack: ["React", "Tailwind CSS", "Node.js", "PostgreSQL", "Prisma", "Vercel"],
+      liveUrl: "https://eko-waste.vercel.app/",
+      githubUrl: "https://github.com/adetunjisam9-collab/eko-waste",
+      category: "Civic Tech",
+      status: "Live",
+    },
   ];
 
   return (
