@@ -93,9 +93,9 @@ export default function Hero() {
           <a href="#contact" className="px-8 py-4 rounded-lg font-medium text-base text-gray-950 hover:opacity-90 active:scale-95 transition duration-200" style={{ background: "#00FFC6" }}>Start a Project</a>
           <a href="#services" className="px-8 py-4 rounded-lg font-medium text-base text-white border border-white/20 hover:border-white/40 active:scale-95 transition duration-200">Explore Services</a>
         </div>
-        <div className="flex items-center justify-center gap-10 text-center">
+        <div className="flex items-center justify-center gap-4 md:gap-10 text-center px-4">
           <div>
-            <p className="text-3xl font-bold text-white">2+</p>
+            <p className="text-2xl md:text-3xl font-bold text-white">2+</p>
             <p className="text-gray-500 text-sm mt-1">Projects Delivered</p>
           </div>
           <div className="w-px h-10 bg-white/10"></div>
