@@ -1,4 +1,5 @@
-﻿export default function Team() {
+﻿"use client";
+export default function Team() {
   return (
     <section className="py-24 px-6" style={{ background: "#030712" }}>
       <div className="max-w-6xl mx-auto">
@@ -11,7 +12,7 @@
 
         <div className="flex justify-center">
           <div data-aos="fade-up" className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-400/30 transition duration-300 text-center max-w-sm w-full">
-            <div className="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-6">
+            <div className="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-6 transition duration-300 hover:ring-4 hover:ring-offset-2 hover:ring-offset-gray-800" style={{ boxShadow: "0 0 0 0 rgba(0,255,198,0)" }} onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.boxShadow="0 0 15px 2px rgba(0,255,198,0.15)"} onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 0 0 rgba(0,255,198,0)"}>
               <img src="/images/avatar.png" alt="Adetunji Samuel Adedeji" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-xl font-bold text-white mb-1">Adetunji Samuel Adedeji</h3>
