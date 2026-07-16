@@ -11,8 +11,8 @@
 
         <div className="flex justify-center">
           <div data-aos="fade-up" className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-400/30 transition duration-300 text-center max-w-sm w-full">
-            <div className="w-24 h-24 rounded-2xl bg-blue-600 flex items-center justify-center mx-auto mb-6">
-              <span className="text-white text-4xl font-bold">AS</span>
+            <div className="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-6">
+              <img src="/images/avatar.png" alt="Adetunji Samuel Adedeji" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-xl font-bold text-white mb-1">Adetunji Samuel Adedeji</h3>
             <p className="text-sm font-medium mb-4" style={{ color: "#00FFC6" }}>Founder & Lead Engineer</p>
