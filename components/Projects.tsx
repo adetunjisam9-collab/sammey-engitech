@@ -3,7 +3,7 @@
     {
       name: "ProHealth Nexus",
       tagline: "A full-stack HIPAA-compliant healthcare management platform",
-      description: "ProHealth Nexus unifies the entire care workflow into one secure platform. Patients book appointments, doctors track patient progress in real time, and admins oversee everything from one dashboard — with full HIPAA compliance built in from day one.",
+      description: "ProHealth Nexus unifies the entire care workflow into one secure platform. Patients book appointments, doctors track patient progress in real time, and admins oversee everything from one dashboard, with full HIPAA compliance built in from day one.",
       techStack: ["React", "Node.js", "PostgreSQL", "Vercel", "Render", "Brevo"],
       liveUrl: "https://pro-health-nexus.vercel.app/login",
       githubUrl: "https://github.com/adetunjisam9-collab/ProHealthNexus-",
@@ -13,7 +13,7 @@
     {
       name: "EKO WASTE",
       tagline: "Gamified waste management platform for Lagos residents",
-      description: "EKO WASTE connects Lagos residents, waste collectors and admins in one smart platform. Residents book pickups, collectors mark completions, and residents earn coins for every pickup — with the cleanest resident crowned on the leaderboard. Serves all 20 LGAs in Lagos.",
+      description: "EKO WASTE connects Lagos residents, waste collectors and admins in one smart platform. Residents book pickups, collectors mark completions, and residents earn coins for every pickup, with the cleanest resident crowned on the leaderboard. Serves all 20 LGAs in Lagos.",
       techStack: ["React", "Tailwind CSS", "Node.js", "PostgreSQL", "Prisma", "Vercel"],
       liveUrl: "https://eko-waste.vercel.app/",
       githubUrl: "https://github.com/adetunjisam9-collab/eko-waste",
@@ -29,7 +29,7 @@
           <div className="section-divider"></div>
           <p className="text-sm font-medium uppercase tracking-widest mb-2" style={{ color: "#00FFC6" }}>What We Have Built</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Work</h2>
-          <p className="text-gray-400 text-lg max-w-2xl">Real products built and deployed — solving real problems for real people.</p>
+          <p className="text-gray-400 text-lg max-w-2xl">Real products built and deployed, solving real problems for real people.</p>
         </div>
         <div className="flex flex-col gap-8">
           {projects.map((project, i) => (

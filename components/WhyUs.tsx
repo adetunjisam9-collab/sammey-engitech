@@ -28,9 +28,9 @@
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { title: "We think big", description: "From healthcare platforms to neurolink technology — we dream at scale and execute with precision." },
-            { title: "We deliver fast", description: "No endless meetings. We scope, build and ship — keeping you informed every step of the way." },
-            { title: "We build to last", description: "Every product we build is scalable, secure and maintainable — ready to grow with your business." },
+            { title: "We think big", description: "From healthcare platforms to neurolink technology. we dream at scale and execute with precision." },
+            { title: "We deliver fast", description: "No endless meetings. We scope, build and ship, keeping you informed every step of the way." },
+            { title: "We build to last", description: "Every product we build is scalable, secure and maintainable, ready to grow with your business." },
           ].map((item, i) => (
             <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-400/30 transition duration-300">
               <div className="w-2 h-2 rounded-full mb-4" style={{ background: "#00FFC6" }}></div>

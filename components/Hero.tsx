@@ -88,7 +88,7 @@ export default function Hero() {
           <span className="animate-pulse" style={{ color: "#00FFC6" }}>|</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">Building the future, one technology at a time.</p>
-        <p className="text-base text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">From web and mobile applications to AI systems, embedded chips and robotics — Sammey Engitech is where vision meets execution.</p>
+        <p className="text-base text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">From web and mobile applications to AI systems, embedded chips and robotics, Sammey Engitech is where vision meets execution.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a href="#contact" className="px-8 py-4 rounded-lg font-medium text-base text-gray-950 hover:opacity-90 active:scale-95 transition duration-200" style={{ background: "#00FFC6" }}>Start a Project</a>
           <a href="#services" className="px-8 py-4 rounded-lg font-medium text-base text-white border border-white/20 hover:border-white/40 active:scale-95 transition duration-200">Explore Services</a>

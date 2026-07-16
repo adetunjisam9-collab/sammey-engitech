@@ -1,9 +1,9 @@
 ﻿export default function Process() {
   const steps = [
     { number: "01", title: "Discover", description: "We listen to your idea, understand your goals and define the scope of what we are building together." },
-    { number: "02", title: "Design", description: "We map out the architecture, UI and user experience — making sure every detail is intentional before we write a line of code." },
-    { number: "03", title: "Build", description: "We develop your product with clean, scalable code — keeping you updated with regular progress check-ins." },
-    { number: "04", title: "Deploy", description: "We launch your product to the world — with proper testing, monitoring and post-launch support." },
+    { number: "02", title: "Design", description: "We map out the architecture, UI and user experience, making sure every detail is intentional before we write a line of code." },
+    { number: "03", title: "Build", description: "We develop your product with clean, scalable code, keeping you updated with regular progress check-ins." },
+    { number: "04", title: "Deploy", description: "We launch your product to the world, with proper testing, monitoring and post-launch support." },
   ];
 
   return (

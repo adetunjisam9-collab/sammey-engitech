@@ -16,7 +16,7 @@
             </div>
             <h3 className="text-xl font-bold text-white mb-1">Adetunji Samuel Adedeji</h3>
             <p className="text-sm font-medium mb-4" style={{ color: "#00FFC6" }}>Founder & Lead Engineer</p>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">Full stack developer, creative technologist and the visionary behind Sammey Engitech. Building the future of technology in Nigeria — one product at a time.</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">Full stack developer, creative technologist and the visionary behind Sammey Engitech. Building the future of technology in Nigeria, one product at a time.</p>
             <div className="flex items-center justify-center gap-3">
               <a href="https://github.com/adetunjisam9-collab" target="_blank" className="text-xs px-4 py-2 rounded-lg border border-white/20 text-gray-300 hover:border-teal-400 hover:text-teal-400 transition duration-200">GitHub</a>
               <a href="https://twitter.com/BIGSAMMEY9" target="_blank" className="text-xs px-4 py-2 rounded-lg border border-white/20 text-gray-300 hover:border-teal-400 hover:text-teal-400 transition duration-200">Twitter</a>
